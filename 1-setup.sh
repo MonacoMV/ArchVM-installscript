@@ -1,8 +1,8 @@
-   _____                 __       ____     __                      
-  /  _  \_______   ____ |  |__   |    |   |__| ____  __ _____  ___ 
- /  /_\  \_  __ \_/ ___\|  |  \  |    |   |  |/    \|  |  \  \/  / 
-/    |    \  | \/\  \___|   Y  \ |    |___|  |   |  \  |  />    <  
-\____|__  /__|    \___  >___|  / |_______ \__|___|  /____//__/\_ \ 
+echo -e "   _____                 __       ____     __                      "
+echo -e "  /  _  \_______   ____ |  |__   |    |   |__| ____  __ _____  ___ "
+echo -e " /  /_\  \_  __ \_/ ___\|  |  \  |    |   |  |/    \|  |  \  \/  / "
+echo -e "/    |    \  | \/\  \___|   Y  \ |    |___|  |   |  \  |  />    <  "
+echo -e "\____|__  /__|    \___  >___|  / |_______ \__|___|  /____//__/\_ \ "
 
 echo "--------------------------------------"
 echo "--          Network Setup           --"
@@ -29,7 +29,8 @@ localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="en_US.UTF-8"
 localectl --no-ask-password set-keymap us
 
 # Add sudo no password rights
-sed -i 's/^# %wheel ALL=(ALL) ALL/Defaults !tty_tickets/' /etc/sudoers
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+echo "Defaults !tty_tickets" >> /etc/sudoers
 
 #Add parallel downloading
 sed -i 's/^#Para/Para/' /etc/pacman.conf
@@ -37,3 +38,4 @@ sed -i 's/^#Para/Para/' /etc/pacman.conf
 #Enable multilib
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
+
