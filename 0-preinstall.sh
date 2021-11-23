@@ -1,12 +1,10 @@
 timedatectl set-ntp true
 
-echo -e "   _____                .__      .____    .__                     "
-echo -e "  /  _  \_______   ____ |  |__   |    |   |__| ____  __ _____  ___"
-echo -e " /  /_\  \_  __ \_/ ___\|  |  \  |    |   |  |/    \|  |  \  \/  /"
-echo -e "/    |    \  | \/\  \___|   Y  \ |    |___|  |   |  \  |  />    < "
-echo -e "\____|__  /__|    \___  >___|  / |_______ \__|___|  /____//__/\_ \"
-echo -e "        \/            \/     \/          \/       \/            \/"
-
+echo -e "   _____                 __       ____     __                      "
+echo -e "  /  _  \_______   ____ |  |__   |    |   |__| ____  __ _____  ___ "
+echo -e " /  /_\  \_  __ \_/ ___\|  |  \  |    |   |  |/    \|  |  \  \/  / "
+echo -e "/    |    \  | \/\  \___|   Y  \ |    |___|  |   |  \  |  />    <  "
+echo -e "\____|__  /__|    \___  >___|  / |_______ \__|___|  /____//__/\_ \ "
 
 echo "-------------------------------------------------"
 echo "-------select your disk to format----------------"
@@ -16,7 +14,6 @@ echo "Please enter disk to work on: (example /dev/sda)"
 read DISK
 echo "THIS WILL FORMAT AND DELETE ALL DATA ON THE DISK"
 read -p "are you sure you want to continue (Y/N):" formatdisk
-case $formatdisk in
 
 y|Y|yes|Yes|YES)
 echo "--------------------------------------"
